@@ -1,6 +1,9 @@
 # These options are enabled when running on CI
 # We do this by copying this file to /etc/bazel.bazelrc at the start of the build.
 
+# Disable NG CLI TTY mode
+build --action_env=NG_FORCE_TTY=false
+
 # Echo all the configuration settings and their source
 build --announce_rc
 
